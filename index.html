@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profil Biodata</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
+    nav ul {
+      display: flex;
+      list-style-type: none;
+      justify-content: flex-end;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: black;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background-color: #fafafa;
+    }
+    .header-text {
+      flex: 1;
+    }
+    .header-image {
+      flex: 1;
+      text-align: right;
+    }
+    .header-image img {
+      max-width: 100%;
+      height: auto;
+    }
+    .about {
+      text-align: center;
+      padding: 20px;
+    }
+    .biodata {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    .biodata .box {
+      width: 150px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+      background-color: #f9f9f9;
+    }
+    .portfolio {
+      padding: 20px;
+    }
+    .portfolio h2 {
+      text-align: center;
+    }
+    .portfolio table {
+      margin: auto;
+    }
+    .portfolio img {
+      width: 350px;
+      height: 200px;
+    }
+    .project-caption {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Section 1: Menu -->
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Header</a></li>
+      <li><a href="#">Biodata</a></li>
+      <li><a href="#">Portofolio</a></li>
+    </ul>
+  </nav>
+
+  <!-- Section 2: Judul + Gambar -->
+  <section class="header">
+    <div class="header-text">
+      <h1>Selamat Datang di Website Saya</h1>
+      <p>Ini adalah contoh header dengan dua kolom. Kamu bisa beri teks seperti ini.</p>
+    </div>
+    <div class="header-image">
+      <img src="https://via.placeholder.com/600x400" alt="Foto">
+    </div>
+  </section>
+
+  <!-- Section 3: Biodata -->
+  <section class="about">
+    <h2>About Me</h2>
+    <p>A short description about myself</p>
+  </section>
+  <section class="biodata">
+    <div class="box">Full Name</div>
+    <div class="box">Education</div>
+    <div class="box">Gender</div>
+    <div class="box">Contact</div>
+    <div class="box">Hobby</div>
+    <div class="box">Address</div>
+  </section>
+
+  <!-- Section 4: Portofolio (HTML Table) -->
+  	
+  <!-- Section 4: Portofolio (HTML Table) -->
+<section class="portfolio">
+  <h2>Portofolio</h2>
+  <table style="border-collapse: separate; border-spacing: 20px;">
+    <tr>
+      <td>
+        <div style="border: 1px solid #ccc; padding: 10px; text-align: center;">
+          <img src="https://via.placeholder.com/350x200" alt="Project 1">
+          <div class="project-caption">Deskripsi project 1</div>
+        </div>
+      </td>
+      <td>
+        <div style="border: 1px solid #ccc; padding: 10px; text-align: center;">
+          <img src="https://via.placeholder.com/350x200" alt="Project 2">
+          <div class="project-caption">Deskripsi project 2</div>
+        </div>
+      </td>
+      <td>
+        <div style="border: 1px solid #ccc; padding: 10px; text-align: center;">
+          <img src="https://via.placeholder.com/350x200" alt="Project 3">
+          <div class="project-caption">Deskripsi project 3</div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</section>
+
+
+</body>
+</html>
