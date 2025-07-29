@@ -18,10 +18,8 @@ Ini adalah project sederhana HTML & CSS yang menampilkan halaman **profil pribad
 - **Responsive Layout**: Tampilan menyesuaikan layar perangkat.
 
 ## 📷 Preview
-![Preview Project](https://najimuhammad67.github.io/assignment-eduwork1/
-)
 
-![Preview Project]((https://najimuhammad67.github.io/assignment-eduwork1/))
+[🔗 Lihat Website](https://najimuhammad67.github.io/assignment-eduwork1/)
 
 
 ## 📁 Struktur File
