@@ -3,64 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Profil Biodata</title>
+  <title>Profil Biodata - Dodi</title>
   <style>
+    :root {
+      --primary: #007bff;
+      --light: #f9f9f9;
+      --border: #ccc;
+    }
+    * {
+      box-sizing: border-box;
+    }
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
+      background-color: #ffffff;
     }
     nav {
-      background-color: #f1f1f1;
-      padding: 10px;
+      background-color: var(--primary);
+      color: white;
+      padding: 10px 20px;
     }
     nav ul {
       display: flex;
-      list-style-type: none;
+      list-style: none;
       justify-content: flex-end;
-      gap: 20px;
       margin: 0;
       padding: 0;
+      gap: 20px;
     }
     nav ul li a {
+      color: white;
       text-decoration: none;
-      color: black;
+      font-weight: bold;
     }
     .header {
       display: flex;
-      justify-content: space-between;
+      flex-wrap: wrap;
       align-items: center;
-      padding: 20px;
-      background-color: #fafafa;
+      padding: 40px 20px;
+      background-color: #f0f8ff;
     }
     .header-text {
       flex: 1;
     }
+    .header-text h1 {
+      margin-bottom: 10px;
+    }
     .header-image {
       flex: 1;
-      text-align: right;
+      text-align: center;
     }
     .header-image img {
-      max-width: 100%;
-      height: auto;
+      max-width: 250px;
+      border-radius: 12px;
+    }
+    .btn {
+      background-color: var(--primary);
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
     }
     .about {
       text-align: center;
-      padding: 20px;
+      padding: 30px 20px;
     }
     .biodata {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
       padding: 20px;
+      background-color: var(--light);
     }
     .biodata .box {
-      width: 150px;
-      border: 1px solid #ccc;
-      padding: 10px;
-      text-align: center;
-      background-color: #f9f9f9;
+      border: 1px solid var(--border);
+      padding: 15px;
+      background: white;
     }
     .portfolio {
       padding: 20px;
@@ -68,86 +87,104 @@
     .portfolio h2 {
       text-align: center;
     }
-    .portfolio table {
-      margin: auto;
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
     }
-    .portfolio img {
-      width: 350px;
-      height: 200px;
-    }
-    .project-caption {
+    .portfolio-item {
+      border: 1px solid var(--border);
+      padding: 10px;
       text-align: center;
+      background: white;
+    }
+    .portfolio-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #eaeaea;
+      margin-top: 30px;
       font-size: 14px;
-      margin-top: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Section 1: Menu -->
+  <!-- Navbar -->
   <nav>
     <ul>
-      <li><a href="#">Home</a></li>
       <li><a href="#">Header</a></li>
       <li><a href="#">Biodata</a></li>
       <li><a href="#">Portofolio</a></li>
     </ul>
   </nav>
 
-  <!-- Section 2: Judul + Gambar -->
+  <!-- Header -->
   <section class="header">
     <div class="header-text">
       <h1>Selamat Datang di Website Saya</h1>
-      <p>Ini adalah contoh header dengan dua kolom. Kamu bisa beri teks seperti ini.</p>
+      <p>Ini adalah contoh header dengan dua kolom. Kolom kiri berisi teks seperti ini.</p>
+      <button class="btn">Pelajari Lebih Lanjut</button>
     </div>
     <div class="header-image">
-      <img src="https://via.placeholder.com/600x400" alt="Foto">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto Profil">
     </div>
   </section>
 
-  <!-- Section 3: Biodata -->
+  <!-- About Me -->
   <section class="about">
     <h2>About Me</h2>
-    <p>A short description about myself</p>
+    <p>A brief introduction about myself</p>
   </section>
+
+  <!-- Biodata -->
   <section class="biodata">
-    <div class="box">Full Name</div>
-    <div class="box">Education</div>
-    <div class="box">Gender</div>
-    <div class="box">Contact</div>
-    <div class="box">Hobby</div>
-    <div class="box">Address</div>
+    <div class="box"><strong>Full Name:</strong> Dodi</div>
+    <div class="box"><strong>Education:</strong> S1 Informatika</div>
+    <div class="box"><strong>Pekerjaan:</strong> Programmer</div>
+    <div class="box"><strong>Contact:</strong> dodi@example.com</div>
+    <div class="box"><strong>Hobi:</strong> Membaca, Coding</div>
+    <div class="box"><strong>Alamat:</strong> Jakarta</div>
   </section>
 
-  <!-- Section 4: Portofolio (HTML Table) -->
-  	
-  <!-- Section 4: Portofolio (HTML Table) -->
-<section class="portfolio">
-  <h2>Portofolio</h2>
-  <table style="border-collapse: separate; border-spacing: 20px;">
-    <tr>
-      <td>
-        <div style="border: 1px solid #ccc; padding: 10px; text-align: center;">
-          <img src="https://via.placeholder.com/350x200" alt="Project 1">
-          <div class="project-caption">Deskripsi project 1</div>
-        </div>
-      </td>
-      <td>
-        <div style="border: 1px solid #ccc; padding: 10px; text-align: center;">
-          <img src="https://via.placeholder.com/350x200" alt="Project 2">
-          <div class="project-caption">Deskripsi project 2</div>
-        </div>
-      </td>
-      <td>
-        <div style="border: 1px solid #ccc; padding: 10px; text-align: center;">
-          <img src="https://via.placeholder.com/350x200" alt="Project 3">
-          <div class="project-caption">Deskripsi project 3</div>
-        </div>
-      </td>
-    </tr>
-  </table>
-</section>
+  <!-- Portofolio -->
+  <section class="portfolio">
+    <h2>Portofolio</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <img src="https://via.placeholder.com/350x200?text=Project+1" alt="Project 1">
+        <p><strong>Proyek 1</strong></p>
+        <p>Deskripsi project 1</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://via.placeholder.com/350x200?text=Project+2" alt="Project 2">
+        <p><strong>Proyek 2</strong></p>
+        <p>Deskripsi project 2</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://via.placeholder.com/350x200?text=Project+3" alt="Project 3">
+        <p><strong>Proyek 3</strong></p>
+        <p>Deskripsi project 3</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- Footer -->
+  <footer>
+    © 2024 Dodi. All rights reserved.
+  </footer>
 
 </body>
 </html>
